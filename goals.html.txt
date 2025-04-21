@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Your Goal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Select Your Future Goal</h2>
+    <button class="button" onclick="selectGoal('Become a Doctor')">Become a Doctor</button>
+    <button class="button" onclick="selectGoal('Travel the World')">Travel the World</button>
+    <input type="text" id="customGoal" placeholder="Or write your own...">
+    <a id="nextBtn" class="button" href="#">Next</a>
+  </div>
+
+  <script>
+    function selectGoal(goal) {
+      localStorage.setItem('goal', goal);
+      document.getElementById('nextBtn').href = "details.html";
+    }
+    document.getElementById('customGoal').addEventListener('input', function() {
+      localStorage.setItem('goal', this.value);
+      document.getElementById('nextBtn').href = "details.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="date" id="birthdate">
+    <input type="file" id="photo">
+    <a class="button" href="memory.html" onclick="saveDetails()">Next</a>
+  </div>
+
+  <script>
+    function saveDetails() {
+      localStorage.setItem('name', document.getElementById('name').value);
+      localStorage.setItem('birthdate', document.getElementById('birthdate').value);
+    }
+  </script>
+</body>
+</html>

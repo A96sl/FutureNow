@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Your Memory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Your Future Memory</h2>
+    <button class="button" onclick="createMemory()">Create Memory</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function createMemory() {
+      const name = localStorage.getItem('name');
+      const goal = localStorage.getItem('goal');
+      document.getElementById('message').innerText = Generating a 3-minute AI memory video for ${name} about "${goal}"...;
+    }
+  </script>
+</body>
+</html>
